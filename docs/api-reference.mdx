@@ -19,22 +19,43 @@ All requests must include a bearer token in the `Authorization` header.
   "description": "Returns the authenticated user's profile.",
   "tab": "examples",
   "examples": {
+    "selectedLanguageId": "ex-curl",
     "languages": [
       {
-        "id": "curl",
-        "language": "bash",
-        "code": "curl https://api.archbee.com/v2/me -H \"Authorization: Bearer <token>\""
+        "id": "ex-curl",
+        "language": "curl",
+        "code": "curl https://api.archbee.com/v2/me -H \"Authorization: Bearer <token>\"",
+        "customLabel": ""
       }
-    ],
-    "selectedLanguageId": "curl"
+    ]
   },
-  "results": {},
+  "results": {
+    "selectedLanguageId": "res-200",
+    "languages": [
+      {
+        "id": "res-200",
+        "language": "200",
+        "code": "{\n  \"id\": \"user_123\",\n  \"email\": \"jane@example.com\"\n}",
+        "customLabel": ""
+      },
+      {
+        "id": "res-401",
+        "language": "401",
+        "code": "{\n  \"message\": \"Invalid or missing bearer token.\"\n}",
+        "customLabel": ""
+      }
+    ]
+  },
   "request": {
     "pathParameters": [],
     "queryParameters": [],
     "headerParameters": [],
     "formDataParameters": [],
     "bodyDataParameters": []
+  },
+  "currentNewParameter": {
+    "label": "Body Parameter",
+    "value": "bodyDataParameters"
   },
   "hasTryItOut": true
 }

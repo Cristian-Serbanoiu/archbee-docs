@@ -13,18 +13,22 @@
       },
       {
         "path": "api-reference.mdx",
+        "isHidden": true,
         "children": []
       },
       {
         "path": "release-notes.mdx",
+        "isHidden": true,
         "children": []
       },
       {
         "path": "internal-runbook.mdx",
+        "isHidden": true,
         "children": []
       },
       {
         "path": "this-is-a-doc.mdx",
+        "isHidden": true,
         "children": []
       },
       {
@@ -33,6 +37,7 @@
       },
       {
         "path": "cascade-parent.mdx",
+        "isHidden": true,
         "children": [
           {
             "path": "cascade-child.mdx",
