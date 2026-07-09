@@ -26,6 +26,19 @@
       {
         "path": "this-is-a-doc.mdx",
         "children": []
+      },
+      {
+        "path": "no-hidden-flag.mdx",
+        "children": []
+      },
+      {
+        "path": "cascade-parent.mdx",
+        "children": [
+          {
+            "path": "cascade-child.mdx",
+            "children": []
+          }
+        ]
       }
     ]
   }

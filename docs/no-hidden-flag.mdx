@@ -1,0 +1,12 @@
+---
+title: No Hidden Flag
+slug: no-hidden-flag
+docTags: 
+createdAt: Thu Jul 09 2026 12:00:00 GMT+0000 (Coordinated Universal Time)
+---
+
+## No hidden flag in frontmatter
+
+This document intentionally omits the `hidden` key from its frontmatter. On Git
+sync import it should default to **visible** — this is the third frontmatter
+parse case the ticket covers (`true` / `false` / omitted).
