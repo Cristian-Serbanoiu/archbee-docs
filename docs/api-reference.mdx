@@ -1,0 +1,87 @@
+---
+title: API Reference
+slug: api-reference
+hidden: true
+docTags: 
+createdAt: Wed Jul 08 2026 09:33:37 GMT+0000 (Coordinated Universal Time)
+---
+
+## Authentication
+
+All requests must include a bearer token in the `Authorization` header.
+
+:::ApiMethodV2
+```json
+{
+  "name": "Get current user",
+  "method": "GET",
+  "url": "https://api.archbee.com/v2/me",
+  "description": "Returns the authenticated user's profile.",
+  "tab": "examples",
+  "examples": {
+    "languages": [
+      {
+        "id": "curl",
+        "language": "bash",
+        "code": "curl https://api.archbee.com/v2/me -H \"Authorization: Bearer <token>\""
+      }
+    ],
+    "selectedLanguageId": "curl"
+  },
+  "results": {},
+  "request": {
+    "pathParameters": [],
+    "queryParameters": [],
+    "headerParameters": [],
+    "formDataParameters": [],
+    "bodyDataParameters": []
+  },
+  "hasTryItOut": true
+}
+```
+:::
+
+## SDK usage
+
+::::Tabs
+:::Tab{title="JavaScript"}
+```javascript
+import { Archbee } from "@archbee/sdk";
+
+const client = new Archbee({ token: process.env.ARCHBEE_TOKEN });
+const me = await client.me();
+console.log(me.email);
+```
+:::
+:::Tab{title="Python"}
+```python
+from archbee import Archbee
+
+client = Archbee(token=os.environ["ARCHBEE_TOKEN"])
+me = client.me()
+print(me.email)
+```
+:::
+::::
+
+## Full request/response
+
+::::CodeDrawer{title="Create a document"}
+:::CodeblockTabsExamples
+```bash
+curl -X POST https://api.archbee.com/v2/docs \
+  -H "Authorization: Bearer <token>" \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Hello","spaceId":"abc"}'
+```
+:::
+:::CodeblockTabsResponses
+```json
+{
+  "id": "doc_123",
+  "title": "Hello",
+  "spaceId": "abc"
+}
+```
+:::
+::::
